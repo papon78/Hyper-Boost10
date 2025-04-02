@@ -1,0 +1,64 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+nav {
+    background: #2563eb;
+    color: white;
+    padding: 1rem;
+}
+.nav-links a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+.hero {
+    padding: 2rem 5%;
+    background: #f8f9fa;
+    text-align: center;
+}
+.service-overview, .why-choose-us, .special-offers, .contact-support {
+    padding: 5rem 5%;
+}
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: white;
+}
+.whatsapp-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+.whatsapp-logo:hover {
+    transform: scale(1.1);
+}
+.whatsapp-logo img {
+    width: 35px;
+    height: 35px;
+}
+/* Additional styles for cards and sections */
+.benefits-grid, .stats-grid, .offers-grid, .support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.benefit-card, .stat-card, .offer-card, .support-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
