@@ -4,25 +4,397 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hyper Boost - Services</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .service-category {
+            background: white;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .service-category h2 {
+            color: #2563eb;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 10px;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            padding: 8px 0;
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .service-list li:before {
+            content: "✅";
+            margin-right: 10px;
+        }
+
+        .order-btn {
+            padding: 5px 15px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .order-btn:hover {
+            background: #45a049;
+        }
+
+        .tab-container {
+            display: flex;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: #eee;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .tab-btn.active {
+            background: #2563eb;
+            color: white;
+        }
+
+        .service-tab {
+            display: none;
+        }
+
+        .service-tab.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="logo">Hyper Boost</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="services.html">Services</a>
-            <a href="about.html">About</a>
-            <a href="profile.html">Profile</a>
+    <div class="services-container">
+        <div class="tab-container">
+            <button class="tab-btn active" onclick="showTab('facebook')">Facebook</button>
+            <button class="tab-btn" onclick="showTab('instagram')">Instagram</button>
+            <button class="tab-btn" onclick="showTab('tiktok')">TikTok</button>
+            <button class="tab-btn" onclick="showTab('youtube')">YouTube</button>
+            <button class="tab-btn" onclick="showTab('twitter')">Twitter</button>
+            <button class="tab-btn" onclick="showTab('telegram')">Telegram</button>
+            
         </div>
-    </nav>
-    <section class="services">
-        <h2>Our Services</h2>
-        <!-- Add specific services details and order forms here -->
-    </section>
-    <footer>
-        <p>&copy; 2024 Hyper Boost. All rights reserved.</p>
-    </footer>
+
+        <!-- Facebook Services -->
+        <div id="facebook" class="service-tab active">
+            <div class="service-category">
+                <h2>📌 Facebook Reactions</h2>
+                <ul class="service-list">
+                    <li>Facebook Reaction | Like 👍 0-30Min Start | Best Quality | No Refill | 1K-5K Days - $0.99/1K <button class="order-btn" onclick="openOrderModal('Facebook Like Reaction')">Order Now</button></li>
+                    <li>Facebook Reaction | Love ❤️ 0-30Min Start | Best Quality | No Refill | 1K-5K Days - $0.99/1K <button class="order-btn" onclick="openOrderModal('Facebook Love Reaction')">Order Now</button></li>
+                    <li>Facebook Reaction | Care 🥰 0-30Min Start | Best Quality | No Refill | 1K-5K Days - $0.99/1K <button class="order-btn" onclick="openOrderModal('Facebook Care Reaction')">Order Now</button></li>
+                    <li>Facebook Reaction | WoW 😯 0-30Min Start | Best Quality | No Refill | 1K-5K Days - $0.99/1K <button class="order-btn" onclick="openOrderModal('Facebook WoW Reaction')">Order Now</button></li>
+                    <li>Facebook Reaction | HaHa 😂 0-30Min Start | Best Quality | No Refill | 1K-5K Days - $0.99/1K <button class="order-btn" onclick="openOrderModal('Facebook HaHa Reaction')">Order Now</button></li>
+                    <li>Facebook Reaction | Sad 😥 0-30Min Start | Best Quality | No Refill | 1K-5K Days - $0.99/1K <button class="order-btn" onclick="openOrderModal('Facebook Sad Reaction')">Order Now</button></li>
+                    <li>Facebook Reaction | Angry 😡 0-30Min Start | Best Quality | No Refill | 1K-5K Days - $0.99/1K <button class="order-btn" onclick="openOrderModal('Facebook Angry Reaction')">Order Now</button></li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h2>📌 Facebook Views</h2>
+                <ul class="service-list">
+                    <li>Facebook Video Views | Non Drop | Super Fast | Lifetime | 100K-200K/Days - $0.0794/1K <button class="order-btn" onclick="openOrderModal('Facebook Video Views')">Order Now</button></li>
+                    <li>Facebook Reel Views | Super Fast | Non Drop + Life Time | 10K-20K/Days - $0.0242/1K <button class="order-btn" onclick="openOrderModal('Facebook Reel Views')">Order Now</button></li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h2>📌 Facebook Followers</h2>
+                <ul class="service-list">
+                    <li>Facebook Page Follow | Best Quality | 30D Refill | 10K-50K/Day - $0.7/1K <button class="order-btn" onclick="openOrderModal('Facebook Page Follow')">Order Now</button></li>
+                    <li>Facebook Profile Follow | Real + Bot Quality | No Refill | 20K-30K/Days - $0.7/1K <button class="order-btn" onclick="openOrderModal('Facebook Profile Follow')">Order Now</button></li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h2>📌 Facebook BD Reactions</h2>
+                <ul class="service-list">
+                    <li>Facebook Reaction | Like 👍 | Bangladesh 🇧🇩 Best Quality | 30D Refill | 1K-5K Days - $1.10/1K <button class="order-btn" onclick="openOrderModal('BD Facebook Like')">Order Now</button></li>
+                    <li>Facebook Reaction | Love ❤️ | Bangladesh 🇧🇩 Best Quality | 30D Refill | 1K-5K Days - $1.10/1K <button class="order-btn" onclick="openOrderModal('BD Facebook Love')">Order Now</button></li>
+                    <li>Facebook Reaction | Care 🥰 | Bangladesh 🇧🇩 Best Quality | 30D Refill | 1K-5K Days - $1.10/1K <button class="order-btn" onclick="openOrderModal('BD Facebook Care')">Order Now</button></li>
+                    <li>Facebook Reaction | WoW 😯 | Bangladesh 🇧🇩 Best Quality | 30D Refill | 1K-5K Days - $1.10/1K <button class="order-btn" onclick="openOrderModal('BD Facebook WoW')">Order Now</button></li>
+                    <li>Facebook Reaction | HaHa 😂 | Bangladesh 🇧🇩 Best Quality | 30D Refill | 1K-5K Days - $1.10/1K <button class="order-btn" onclick="openOrderModal('BD Facebook HaHa')">Order Now</button></li>
+                    <li>Facebook Reaction | Sad 😥 | Bangladesh 🇧🇩 Best Quality | 30D Refill | 1K-5K Days - $1.10/1K <button class="order-btn" onclick="openOrderModal('BD Facebook Sad')">Order Now</button></li>
+                    <li>Facebook Reaction | Angry 😡 | Bangladesh 🇧🇩 Best Quality | 30D Refill | 1K-5K Days - $1.10/1K <button class="order-btn" onclick="openOrderModal('BD Facebook Angry')">Order Now</button></li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h2>📌 Facebook BD Follow</h2>
+                <ul class="service-list">
+                    <li>🇧🇩 Facebook Profile Follow | Real Quality | Bangladesh | 30D Refill | 5K-10K Days - $1.00/4K <button class="order-btn" onclick="openOrderModal('BD Facebook Profile Follow')">Order Now</button></li>
+                    <li>🇧🇩 Facebook Page Follow | Real Quality | Bangladesh | 30D Refill | 2K-10K Days - $1.00/4K <button class="order-btn" onclick="openOrderModal('BD Facebook Page Follow')">Order Now</button></li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h2>📌 Facebook Views</h2>
+                <ul class="service-list">
+                    <li>Facebook Video Views | Non Drop | Super Fast | Lifetime | 100K-200K/Days - $0.08/1K <button class="order-btn" onclick="openOrderModal('Facebook Video Views')">Order Now</button></li>
+                    <li>Facebook Reel Views | Super Fast | Non Drop + Life Time | 10K-20K/Days - $0.03/1K <button class="order-btn" onclick="openOrderModal('Facebook Reel Views')">Order Now</button></li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h2>📌 Facebook Followers</h2>
+                <ul class="service-list">
+                    <li>Facebook Page Follow | Best Quality | 30D Refill | 10K-50K/Day - $0.7/1K <button class="order-btn" onclick="openOrderModal('Facebook Page Follow')">Order Now</button></li>
+                    <li>Facebook Profile Follow | Real + Bot Quality | No Refill | 20K-30K/Days - $0.7/1K <button class="order-btn" onclick="openOrderModal('Facebook Profile Follow')">Order Now</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="instagram" class="service-tab">
+            <div class="service-category">
+                <h2>📌 Instagram Services</h2>
+                <ul class="service-list">
+                    <li>Instagram Followers | High Quality | 30D Refill | 5K/Day - $1.99/1K <button class="order-btn" onclick="openOrderModal('Instagram Followers')">Order Now</button></li>
+                    <li>Instagram Likes | Real | No Drop | 10K/Day - $0.99/1K <button class="order-btn" onclick="openOrderModal('Instagram Likes')">Order Now</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="tiktok" class="service-tab">
+            <div class="service-category">
+                <h2>📌 TikTok Services</h2>
+                <ul class="service-list">
+                    <li>TikTok Followers | HQ | 30D Refill | 5K/Day - $2.99/1K <button class="order-btn" onclick="openOrderModal('TikTok Followers')">Order Now</button></li>
+                    <li>TikTok Likes | Premium | No Drop | 10K/Day - $1.99/1K <button class="order-btn" onclick="openOrderModal('TikTok Likes')">Order Now</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="youtube" class="service-tab">
+            <div class="service-category">
+                <h2>📌 YouTube Services</h2>
+                <ul class="service-list">
+                    <li>YouTube Views | High Retention | 30D Refill | 10K/Day - $1.50/1K <button class="order-btn" onclick="openOrderModal('YouTube Views')">Order Now</button></li>
+                    <li>YouTube Subscribers | Real | No Drop | 1K/Day - $15.99/1K <button class="order-btn" onclick="openOrderModal('YouTube Subscribers')">Order Now</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="twitter" class="service-tab">
+            <div class="service-category">
+                <h2>📌 Twitter Services</h2>
+                <ul class="service-list">
+                    <li>Twitter Followers | HQ | 30D Refill | 5K/Day - $2.99/1K <button class="order-btn" onclick="openOrderModal('Twitter Followers')">Order Now</button></li>
+                    <li>Twitter Likes | Premium | No Drop | 10K/Day - $1.99/1K <button class="order-btn" onclick="openOrderModal('Twitter Likes')">Order Now</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="telegram" class="service-tab">
+            <div class="service-category">
+                <h2>📌 Telegram Members</h2>
+                <ul class="service-list">
+                    <li>Telegram Members | High Quality | Cancel Enable | Zero Drop | 30 Days ♻️🚀 50K-100K/Days - $0.936/1K <button class="order-btn" onclick="openOrderModal('Telegram Members 30D')">Order Now</button></li>
+                    <li>Telegram Members | High Quality | Cancel Enable | Zero Drop | 60 Days ♻️🚀 50K-100K/Days - $0.936/1K <button class="order-btn" onclick="openOrderModal('Telegram Members 60D')">Order Now</button></li>
+                    <li>Telegram Members | High Quality | Cancel Enable | Zero Drop | 90 Days ♻️🚀 50K-100K/Days - $0.951/1K <button class="order-btn" onclick="openOrderModal('Telegram Members 90D')">Order Now</button></li>
+                    <li>Telegram Channel/Group Members | Refill & Cancel Enable | 30 Days ♻️ | Day 100K - $0.999/1K <button class="order-btn" onclick="openOrderModal('Telegram Channel Members')">Order Now</button></li>
+                    <li>Telegram Members | High Quality | Cancel Enable | Zero Drop | 120 Days ♻️🚀 50K-100K/Days - $2.064/1K <button class="order-btn" onclick="openOrderModal('Telegram Members 120D')">Order Now</button></li>
+                    <li>Telegram Members | High Quality | Cancel Enable | Zero Drop | 180 Days ♻️🚀 50K-100K/Days - $2.191/1K <button class="order-btn" onclick="openOrderModal('Telegram Members 180D')">Order Now</button></li>
+                    <li>Telegram Members | High Quality | Cancel Enable | Zero Drop | 365 Days ♻️🚀 50K-100K/Days - $2.532/1K <button class="order-btn" onclick="openOrderModal('Telegram Members 365D')">Order Now</button></li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h2>📌 Telegram Views</h2>
+                <ul class="service-list">
+                    <li>Telegram Post Views [ Max 50K ] | Last 1 Old Posts - $0.01/1K <button class="order-btn" onclick="openOrderModal('Telegram Old Post Views')">Order Now</button></li>
+                    <li>Telegram Views ~ 5 Future Posts - $0.073/1K <button class="order-btn" onclick="openOrderModal('Telegram 5 Future Views')">Order Now</button></li>
+                    <li>Telegram Views ~ 10 Future Posts - $0.306/1K <button class="order-btn" onclick="openOrderModal('Telegram 10 Future Views')">Order Now</button></li>
+                    <li>Telegram Views ~ 20 Future Posts - $0.411/1K <button class="order-btn" onclick="openOrderModal('Telegram 20 Future Views')">Order Now</button></li>
+                    <li>Telegram Views ~ 50 Future Posts - $0.623/1K <button class="order-btn" onclick="openOrderModal('Telegram 50 Future Views')">Order Now</button></li>
+                    <li>Telegram Views ~ 100 Future Posts - $3.555/1K <button class="order-btn" onclick="openOrderModal('Telegram 100 Future Views')">Order Now</button></li>
+                    <li>Telegram Views ~ 500 Future Posts - $12.149/1K <button class="order-btn" onclick="openOrderModal('Telegram 500 Future Views')">Order Now</button></li>
+                    <li>Telegram Views ~ 1000 Future Posts - $20.388/1K <button class="order-btn" onclick="openOrderModal('Telegram 1000 Future Views')">Order Now</button></li>
+                </ul>
+            </div>
+
+            <div class="service-category">
+                <h2>📌 Telegram Mix Reactions</h2>
+                <ul class="service-list">
+                    <li>Telegram Mix Positive Reactions [👍❤️🔥🥰👏🎉🤩] + Views - $0.017/1K <button class="order-btn" onclick="openOrderModal('Telegram Mix Reactions + Views')">Order Now</button></li>
+                    <li>Telegram Reactions [👍🤩🎉🔥❤️🥰👏🏻] - $0.02/1K <button class="order-btn" onclick="openOrderModal('Telegram Reactions')">Order Now</button></li>
+                    <li>Telegram Mix Positive Reaction [👍🤩🎉🔥❤️🥰👏🏻] + Views - $0.13/1K <button class="order-btn" onclick="openOrderModal('Telegram Mix Reactions Premium')">Order Now</button></li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeOrderModal()">&times;</span>
+            <h3 id="modalTitle">Order Service</h3>
+            <div style="margin-bottom: 15px; padding: 10px; background: #f5f5f5; border-radius: 5px;">
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; margin-bottom: 5px;">
+                    <strong>Service:</strong>
+                    <span id="serviceInfo"></span>
+                </div>
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; margin-bottom: 5px;">
+                    <strong>Rate per 1000:</strong>
+                    <span id="rateInfo"></span>
+                </div>
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px; margin-bottom: 5px;">
+                    <strong>Min order:</strong>
+                    <span id="minOrder">50</span>
+                </div>
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 10px;">
+                    <strong>Max order:</strong>
+                    <span id="maxOrder">50000</span>
+                </div>
+            </div>
+            <form id="orderForm" onsubmit="submitOrder(event)">
+                <input type="text" id="serviceType" readonly>
+                <input type="text" placeholder="Enter your social media link" required>
+                <input type="number" id="quantityInput" placeholder="Enter quantity" required min="50" max="50000" oninput="calculateTotal()">
+                <div id="totalPrice" style="margin: 10px 0; padding: 10px; background: #f0f0f0; border-radius: 5px;">
+                    Total Price: $<span id="calculatedPrice">0.00</span>
+                </div>
+                <select required>
+                    <option value="">Select Quality</option>
+                    <option value="high">High Quality</option>
+                    <option value="medium">Medium Quality</option>
+                    <option value="low">Basic Quality</option>
+                </select>
+                <button type="submit">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content confirmation-modal">
+            <span class="close-btn" onclick="closeConfirmationModal()">&times;</span>
+            <div class="success-icon">✅</div>
+            <h3>Order Confirmed!</h3>
+            <p>Your order has been placed successfully.</p>
+            <p>We will process it shortly.</p>
+            <button onclick="closeConfirmationModal()" style="margin-top: 20px;">Done</button>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            // Hide all tabs
+            document.querySelectorAll('.service-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabId).classList.add('active');
+
+            // Update button states
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.toLowerCase() === tabId.toLowerCase()) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        function openOrderModal(service) {
+            document.getElementById('orderModal').style.display = 'flex';
+            document.getElementById('modalTitle').textContent = 'Order ' + service;
+            document.getElementById('serviceType').value = service;
+            document.getElementById('serviceInfo').textContent = service;
+        }
+
+        function closeOrderModal() {
+            document.getElementById('orderModal').style.display = 'none';
+        }
+
+        function closeConfirmationModal() {
+            document.getElementById('confirmationModal').style.display = 'none';
+        }
+
+        let currentRate = 0;
+
+        function openOrderModal(service) {
+            document.getElementById('orderModal').style.display = 'flex';
+            document.getElementById('modalTitle').textContent = 'Order ' + service;
+            document.getElementById('serviceType').value = service;
+            document.getElementById('serviceInfo').textContent = service;
+
+            // Extract rate from service description
+            const serviceElement = event.target.parentElement;
+            const serviceText = serviceElement.textContent;
+            const rateMatch = serviceText.match(/\$(\d+\.?\d*)/);
+            currentRate = rateMatch ? parseFloat(rateMatch[1]) : 0;
+            document.getElementById('rateInfo').textContent = '$' + currentRate;
+        }
+
+        function calculateTotal() {
+            const quantity = document.getElementById('quantityInput').value;
+            const total = (quantity * currentRate) / 1000;
+            document.getElementById('calculatedPrice').textContent = total.toFixed(2);
+        }
+
+        function submitOrder(event) {
+            event.preventDefault();
+            const quantity = document.getElementById('quantityInput').value;
+            if (quantity < 50 || quantity > 50000) {
+                alert('Please enter a quantity between 50 and 50000');
+                return;
+            }
+            closeOrderModal();
+            document.getElementById('confirmationModal').style.display = 'flex';
+            event.target.reset();
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const orderModal = document.getElementById('orderModal');
+            const confirmationModal = document.getElementById('confirmationModal');
+            if (event.target == orderModal) {
+                closeOrderModal();
+            }
+            if (event.target == confirmationModal) {
+                closeConfirmationModal();
+            }
+        }
+    </script>
 </body>
 </html>
