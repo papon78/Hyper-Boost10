@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard - Hyper Boost</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">Hyper Boost</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="profile.html">Profile</a>
+            <a href="#" id="logout-btn">Logout</a>
+        </div>
+    </nav>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="profile-card">
+                <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-picture">
+                <h3>JohnDoe</h3>
+                <div class="verification-badge">
+                    <i class="fas fa-check-circle"></i>
+                    Verified Account
+                </div>
+                <p>Member since: Jan 2024</p>
+                <button class="action-btn" onclick="editProfile()">
+                    <i class="fas fa-edit"></i> Edit Profile
+                </button>
+            </div>
+            <div style="margin-top: 20px">
+                <div class="menu-item active">
+                    <i class="fas fa-home"></i> Dashboard
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-shopping-cart"></i> Orders
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-wallet"></i> Wallet
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Hyper Boost. All rights reserved.</p>
+    </footer>
+    
+    <a href="https://wa.me/8801712627336" class="whatsapp-logo" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+</body>
+</html>
